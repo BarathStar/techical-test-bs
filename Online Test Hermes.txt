@@ -1,0 +1,143 @@
+
+Hermes Online Test
+-----------------
+
+Approach - Sincere efforts to provide value add to the organization.
+--------
+
+"Logged into git and setup complete using username and email and forked & cloned the 
+project to local, identified the observation which will provide value to the project and as 
+well as for the organization. I have also rechecked NPM install.
+
+Observations noted in the overall artifacts
+--------------------------------------------
+In Feature file - 
+
+i) The Site should be specifically defined in feature so that everyone understands either
+in test or some document referring to the test.
+
+ii) The test may be enhanced to different user roles to cover the over test
+
+In Scenario 1 - Then condition 
+
+Observation: assertstatus 201- “This a good practice to report”
+
+There should be a message to the user on the result in the Then clause for each scenario
+
+iii) There should be Given if there is prerequisite in each scenario so that
+the required prerequisite are not missed
+
+(iv)Can rephrase the Feature 
+Can include a header for the feature like this
+
+# features/myRegister.feature
+
+(v)Including more detail such as roles below - Admin normal user etc.,
+As a user<Mention user role as applicable>
+I need to register in <Specific site>
+So that I can see myself registered in <Specific site>
+
+Note: Maintaining a standard format across all the feature file and step definition files
+is necessary to make maintenance easy. For the all the test there should some comment line say for e.g.,
+
+(vi)Comments in the script will add more value to the project
+In the database_steps.js - need to give brief comment to to differentiate setup steps, test
+steps(When ,And, Then) and teardown steps.
+
+Similarly for the questions. Feature also includes as applicable 
+
+Below is my observation/suggestion
+/* comments wherever it’s necessary
+As a user
+I need to register in <Specific site>
+So that I can see myself registered in <Specific site>
+
+/* for questioner
+As a questioner
+I want to ask questions 
+So that I can make myself answered
+ Note: mention specifics as applicable
+(vii)Test data for the specific user role should be handy or should be got before test
+(viii)All the Then class should return the response and user defined text to clearly pin 
+point what is the issue with the application on failures
+
+(ix) Features to add new users - value adds
+
+a) Adding test specific to User roles and also for functionalities such as edit or delete questions, or find questions and answers
+
+
+Edit:
+
+Scenario: Editing the HermesWS site
+Given I login as a <<Admin>> in HermesWS site
+And I edit the details
+So that I am able to edit the details in the site
+Note: The role can be parameterized for different story and run it
+to make the design & execution effort more simple.
+
+
+Delete
+
+Scenario: Delete details in the Hermes’s site
+
+Given I login as a <<Admin>> in HermesWS site
+And I find the record details
+So that I am able to details the details in the site
+
+Find: 
+
+Scenario: Finding details in the HermesWS site
+Given I login as a <<Admin>> in HermesWS site
+And I find the record details
+Then I display records found
+
+(x)In the q-and-a.js -  A Q&A Application witha
+Note: There should be a space between with and a
+
+
+API specification
+
+
+On going through the code it looks good, observation of the package are noted above.
+
+On execution of q-and-a.js . - observed 
+Process finished with exit code 0
+
+As far as testing this approach my approach is to use Adavnced Rest client so that I can track the result. Also I will
+check the all the web services request and response and on all acceptance criteria met I will sign off the
+product and raise impediment for the issue cases and complete it.
+
+
+(xi)Testing strategy for the inputs
+For e.g., if so error handling should be taken care in the function. This is very important so that
+application will not crash at any point of time and all our efforts go in vain. This should be strictly followed in q-and-a.js
+including all positive and negative conditions as per the requirement of the product.
+
+(xii) Also the dead code may be removed from deployment system on production environment.
+
+
+(xii)I will follow simple basic rules such as Name cannot be empty, cannot contain alphanumeric characters
+
+
+
+It is prime importance in the approach to verify the request and response using the Advanced Rest Client and Postman as well as necessarily
+
+It is very good to follow the cucumber Gherkin format and keeping in mind it can be
+understood by all users. Also write simple code and reliable code is of prime importance since it will
+reduce maintenance work in future
+
+
+I had some issues with raising defects in github and hence included my observation in the separate file in for the same. I would like to tag the
+this under label Bug and tagged your name so that you are aware of it and highlighted the issues using the formatting feature in github.I am attaching 
+a file Online Test Hermes.txt for the same.
+
+
+
+
+
+
+
+
+
+
+
